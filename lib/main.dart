@@ -423,11 +423,74 @@ class HomePage extends StatelessWidget {
 class BNavRecharge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text("Recharge"),
+    return MaterialApp(
+      routes: {
+        '/bnav/recharge/1': (Context) => Option1(),
+      },
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text("Recharge"),
+          ),
+          body: Container(
+            child: GridView.count(
+              primary: false,
+              crossAxisSpacing: 4,
+              mainAxisSpacing: 4,
+              crossAxisCount: 3,
+              children: <Widget>[
+                Container(
+                  height: 90,
+                  width: 90,
+                  color: Colors.grey,
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  color: Colors.grey,
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  color: Colors.grey,
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  color: Colors.grey,
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  color: Colors.grey,
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  color: Colors.grey,
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  color: Colors.grey,
+                ),
+                Container(
+                  height: 90,
+                  width: 90,
+                  color: Colors.grey,
+                ),
+              ],
+            ),
+          ),
         ),
+      ),
+    );
+  }
+
+  Widget Option1() {
+    return Center(
+      child: Container(
+        child: Text("Hi, OPtion one?"),
       ),
     );
   }
