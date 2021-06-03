@@ -13,6 +13,7 @@ String justName(String name) {
   return name;
 }
 
+// function demonstrates teh use of Future, async, and await
 Future<String> futureName(String name) async {
   print("Function Started");
   await Future.delayed(Duration(seconds: 3));
@@ -20,6 +21,7 @@ Future<String> futureName(String name) async {
   return name;
 }
 
+// function countdown in seconds [timer] to zero 
 Future countDown(int timer) async {
   print("Countdown Started!");
   for (int counter = timer; counter >= 0; counter--) {
@@ -28,6 +30,7 @@ Future countDown(int timer) async {
   }
 }
 
+// function prints 5 lines, pause for 1 sec before proceeding
 Future multiples(int num) async {
   int printCount = 0;
   for (int counter = 100; counter >= 1; counter--) {
@@ -35,6 +38,6 @@ Future multiples(int num) async {
       print(counter);
       printCount++;
     }
-    if (printCount % 5 == 0) await Future.delayed(Duration(seconds: 3));
+    if (printCount % 5 == 0) await Future.delayed(Duration(seconds: 1));
   }
 }
