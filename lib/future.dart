@@ -5,7 +5,7 @@ void main() async {
   // var expectedName = await futureName(name);
   // print(expectedName);
 
-  //await countDown(5);
+  await countDown(5);
   await multiples(10);
 }
 
@@ -28,6 +28,7 @@ Future countDown(int timer) async {
     await Future.delayed(Duration(seconds: 1));
     print(counter);
   }
+  print("Countdown end");
 }
 
 // function prints 5 lines, pause for 1 sec before proceeding
